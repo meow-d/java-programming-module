@@ -1,3 +1,5 @@
+package week1;
+
 class HelloWorld {
     public static void main(String[] args) {
         String name = "World";
