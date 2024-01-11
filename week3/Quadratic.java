@@ -9,11 +9,11 @@ final class QuadraticResult {
         this.secondRoot = secondRoot;
     }
 
-    public double getFirst() {
+    public double getFirstRoot() {
         return firstRoot;
     }
 
-    public double getSecond() {
+    public double getSecondRoot() {
         return secondRoot;
     }
 }
