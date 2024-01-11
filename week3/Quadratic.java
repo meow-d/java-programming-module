@@ -1,20 +1,20 @@
 package week3;
 
 final class QuadraticResult {
-    private final double first;
-    private final double second;
+    private final double firstRoot;
+    private final double secondRoot;
 
-    public QuadraticResult(double first, double second) {
-        this.first = first;
-        this.second = second;
+    public QuadraticResult(double firstRoot, double secondRoot) {
+        this.firstRoot = firstRoot;
+        this.secondRoot = secondRoot;
     }
 
     public double getFirst() {
-        return first;
+        return firstRoot;
     }
 
     public double getSecond() {
-        return second;
+        return secondRoot;
     }
 }
 
@@ -24,14 +24,17 @@ public class Quadratic {
 
         if (discriminant < 0) {
             return null;
+        } else if (discriminant == 0) {
+            double root = -b / (2 * a);
+            return new QuadraticResult(root, root);
         }
 
         double sqrtDiscriminant = Math.sqrt(discriminant);
         double denominator = 2 * a;
 
-        double firstResult = (-b + sqrtDiscriminant) / denominator;
-        double secondResult = (-b - sqrtDiscriminant) / denominator;
+        double firstRoot = (-b + sqrtDiscriminant) / denominator;
+        double secondRoot = (-b - sqrtDiscriminant) / denominator;
 
-        return new QuadraticResult(firstResult, secondResult);
+        return new QuadraticResult(firstRoot, secondRoot);
     }
 }
