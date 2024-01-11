@@ -19,7 +19,7 @@ class Main {
             System.out.print("Please enter your email address: ");
             String emailAddress = scanner.nextLine();
 
-            anotherClass anotherClassObject = new anotherClass(
+            AnotherClass anotherClassObject = new AnotherClass(
                     name,
                     age,
                     hobby,
