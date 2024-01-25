@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// User class
 class User {
     private String userId;
     private String username;
@@ -20,7 +19,17 @@ class User {
         this.role = role;
     }
 
-    // Getters and setters...
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getRole() {
+        return role;
+    }
 
     public void saveToFile() {
         // Save user details to a text file
@@ -33,7 +42,6 @@ class User {
     }
 }
 
-// EndUser class
 class EndUser extends User {
     private String name;
     private String contactDetails;
@@ -56,7 +64,6 @@ class EndUser extends User {
     }
 }
 
-// CentreManager class
 class CentreManager extends User {
     public CentreManager(String userId, String username, String password) {
         super(userId, username, password, "CentreManager");
@@ -73,7 +80,6 @@ class CentreManager extends User {
     }
 }
 
-// Technician class
 class Technician extends User {
     private String technicianId;
     private String specialization;
@@ -100,7 +106,6 @@ class Technician extends User {
     }
 }
 
-// Appointment class
 class Appointment {
     private String appointmentId;
     private String customerId;
