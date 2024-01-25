@@ -1,4 +1,4 @@
-package week3;
+package lab3;
 
 public class AnotherClass {
     String greeting = "Hello, welcome to Java Programming!";
