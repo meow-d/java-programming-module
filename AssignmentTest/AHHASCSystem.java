@@ -23,17 +23,37 @@ class User {
         return userId;
     }
 
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getRole() {
         return role;
     }
 
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public void saveToFile() {
         // Save user details to a text file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("user_details.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("user_details.csv", true))) {
             writer.write(userId + "," + username + "," + password + "," + role);
             writer.newLine();
         } catch (IOException e) {
@@ -53,12 +73,10 @@ class EndUser extends User {
     }
 
     public void register() {
-        // Register end user
         saveToFile();
     }
 
     public void bookAppointment(String technicianId, String appointmentDate) {
-        // Book an appointment
         Appointment appointment = new Appointment(getUserId(), technicianId, appointmentDate);
         appointment.saveToFile();
     }
@@ -123,7 +141,7 @@ class Appointment {
 
     public void saveToFile() {
         // Save appointment details to a text file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("appointment_details.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("appointment_details.csv", true))) {
             writer.write(appointmentId + "," + customerId + "," + technicianId + "," + appointmentDate + ","
                     + paymentStatus);
             writer.newLine();
@@ -153,8 +171,5 @@ public class AHHASCSystem {
         technician.checkAppointments();
         technician.collectPayment("APPT123");
         technician.provideFeedback("APPT123", "Great service!");
-
-        // Additional functionality and interactions can be added based on specific
-        // requirements.
     }
 }
