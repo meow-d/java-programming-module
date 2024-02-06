@@ -1,4 +1,4 @@
-package lab3;
+package lab2;
 
 public class QuadraticTest {
     public static void main(String[] args) {

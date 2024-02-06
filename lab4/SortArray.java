@@ -1,4 +1,4 @@
-package lab5;
+package lab4;
 
 public class SortArray {
     public static void main(String[] args) {

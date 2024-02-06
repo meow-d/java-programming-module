@@ -4,13 +4,33 @@ import java.util.Scanner;
 
 public class exercise3 {
     public static void main(String[] args) {
-        double seconds;
+        int myNum;
+        String grade;
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Please enter a number of seconds: ");
-            seconds = Double.parseDouble(scanner.nextLine());
+            System.out.print("Input mark: ");
+            myNum = scanner.nextInt();
         }
 
-        double hours = seconds / 3600;
-        System.out.println(seconds + " seconds is eqvalent to " + hours + " hours");
+        if (myNum < 0 || myNum > 100) {
+            grade = null;
+        } else if (myNum >= 80) {
+            grade = "A+";
+        } else if (myNum >= 75) {
+            grade = "A";
+        } else if (myNum >= 70) {
+            grade = "B+";
+        } else if (myNum >= 65) {
+            grade = "B";
+        } else if (myNum >= 55) {
+            grade = "C";
+        } else if (myNum >= 50) {
+            grade = "D";
+        } else if (myNum >= 40) {
+            grade = "F+";
+        } else {
+            grade = "F";
+        }
+
+        System.out.println("Your grade is " + grade);
     }
 }

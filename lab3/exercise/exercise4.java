@@ -4,17 +4,30 @@ import java.util.Scanner;
 
 public class exercise4 {
     public static void main(String[] args) {
-        double radius;
+        int first, second, third;
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Please enter a number: ");
-            radius = scanner.nextDouble();
+            System.out.print("Input first number: ");
+            first = scanner.nextInt();
+            System.out.print("Input second number: ");
+            second = scanner.nextInt();
+            System.out.print("Input third number: ");
+            third = scanner.nextInt();
         }
 
-        double area = Math.PI * Math.pow(radius, 2);
-        double circumference = 2 * Math.PI * radius;
+        int largest = first;
+        int smallest = first;
+        if (second > largest) {
+            largest = second;
+        } else {
+            smallest = second;
+        }
+        if (third > largest) {
+            largest = third;
+        } else {
+            smallest = third;
+        }
 
-        System.out.printf("A circle with a radius of %.2f:\n", radius);
-        System.out.printf("Area: %.2f\n", area);
-        System.out.printf("Circumference: %.2f\n", circumference);
+        System.out.printf("Largest number: %d%n", largest);
+        System.out.printf("Smallest number: %d%n", smallest);
     }
 }

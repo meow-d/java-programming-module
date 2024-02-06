@@ -1,23 +1,16 @@
 package lab5;
 
-import java.util.Scanner;
-
 public class ex3 {
     public static void main(String[] args) {
-        int printCount;
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Input print loop count: ");
-            printCount = scanner.nextInt();
-        }
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int[] arr2 = { 1, 2, 3, 4, 5 };
+        int sum = 0;
 
-        boolean iIsEven = false;
-        for (int i = 0; i < printCount; i++) {
-            if (iIsEven) {
-                System.out.println("+++++");
-            } else {
-                System.out.println("*****");
-            }
-            iIsEven = !iIsEven;
+        assert arr.length == arr2.length : "Arrays must have the same length";
+
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i] * arr2[i];
         }
+        System.out.println("Sum of arrays: " + sum);
     }
 }

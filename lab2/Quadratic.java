@@ -1,4 +1,4 @@
-package lab3;
+package lab2;
 
 final class QuadraticResult {
     private final double firstRoot;

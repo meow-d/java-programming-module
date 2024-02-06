@@ -1,4 +1,4 @@
-package lab4;
+package lab3;
 
 public class temperature {
     public static void main(String[] args) {

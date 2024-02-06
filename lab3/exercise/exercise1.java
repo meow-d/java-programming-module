@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class exercise1 {
     public static void main(String[] args) {
-        double first, second;
+        int myNum;
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("The first number is: ");
-            first = Double.parseDouble(scanner.nextLine());
-            System.out.print("The second number is: ");
-            second = Double.parseDouble(scanner.nextLine());
+            System.out.print("Input number: ");
+            myNum = scanner.nextInt();
         }
-        double average = first + second / 2;
-        System.out.println("The average is: " + average);
+
+        if (myNum == 0) {
+            System.out.printf("%d is zero", myNum);
+            return;
+        }
+
+        System.out.printf("%d is %s", myNum, myNum > 0 ? "positive" : "negative");
     }
 }
