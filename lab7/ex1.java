@@ -1,6 +1,15 @@
 package lab7;
 
 public class ex1 {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        Cylinder cylinder = new Cylinder(5, 10);
+        Sphere sphere = new Sphere(5);
+
+        System.out.println("Circle area: " + circle.getArea());
+        System.out.println("Cylinder volume: " + cylinder.getVolume());
+        System.out.println("Sphere volume: " + sphere.getVolume());
+    }
 }
 
 class Circle {
