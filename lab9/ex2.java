@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-import java.awt.*;
 import java.awt.event.*;
 
 public class ex2 {
